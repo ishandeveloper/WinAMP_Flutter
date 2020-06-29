@@ -1,16 +1,25 @@
-# winamp
+<img src="./screenshots/winamp.png" width="100%">
 
-A new Flutter project.
+# WinAMP
 
-## Getting Started
+Almost a decade ago, most of us used **Winamp** for listening to music on our PC devices. It was one of the first music player apps, that was compatible with most modern file types mp3, mp4, avi etc and it featured a wide variety of amazing skins, along with a radio and a browser.
 
-This project is a starting point for a Flutter application.
+This is just a small attempt to recreate that same experience using @flutter .
 
-A few resources to get you started if this is your first Flutter project:
+### DEMO LINK : 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<pre><a href="https://winamp.ishandeveloper.com">winamp.ishandeveloper.com</a></pre>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Screenshots
+Hell, even the errors look impressive :D
+<center><img src="./screenshots/2.png" height="400em">
+<img src="./screenshots/1.png" width="45%">
+<img src="./screenshots/beautifulerrors.png" width="45%">
+
+
+</center>
+
+
+##### Made with ♥ by <a href="https://github.com/ishandeveloper">ishandeveloper</a>
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/ishandeveloper)

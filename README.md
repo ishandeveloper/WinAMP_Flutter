@@ -13,8 +13,8 @@ This is just a small attempt to recreate that same experience using @flutter .
 ### Screenshots
 Hell, even the errors look impressive :D
 <center><img src="./screenshots/2.png" height="400em">
-<img src="./screenshots/1.png" width="45%">
-<img src="./screenshots/beautifulerrors.png" width="45%">
+<img src="./screenshots/1.png" width="80%">
+<img src="./screenshots/beautifulerrors.png" width="80%">
 
 
 </center>

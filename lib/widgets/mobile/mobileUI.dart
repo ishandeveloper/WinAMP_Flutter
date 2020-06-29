@@ -51,6 +51,15 @@ class _MobileUIState extends State<MobileUI> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_element
+    void stopMusic() {
+      setState(() {
+        paused = true;
+        currentTrack = "No Track Selected";
+      });
+      stopAudio();
+    }
+
     void trackTime() {
       setState(() {
         // ignore: division_optimization
@@ -71,12 +80,29 @@ class _MobileUIState extends State<MobileUI> {
       setState(() {
         trackMin = "0" + trackMinint.toString();
       });
+
+      if (trackMin == "03" && trackSec == "04") {
+        setState(() {
+          seekTime = 0;
+          trackMinint = 0;
+          trackSecint = 0;
+          trackMin = "00";
+          trackSec = "00";
+        });
+        stopMusic();
+        seekAudio(0);
+      }
     }
 
     void seeker() async {
       Timer.periodic(Duration(milliseconds: 1000), (timer) {
         if (!paused) {
           trackTime();
+
+          if (seekTime == 185) {
+            stopMusic();
+          }
+
           setState(() {
             seekTime += 1;
           });
@@ -125,15 +151,6 @@ class _MobileUIState extends State<MobileUI> {
         paused = true;
         currentTrack = "PAUSED - Rough - Jordyn Edmonds";
       });
-    }
-
-    // ignore: unused_element
-    void stopMusic() {
-      setState(() {
-        paused = true;
-        currentTrack = "No Track Selected";
-      });
-      stopAudio();
     }
 
     return Scaffold(

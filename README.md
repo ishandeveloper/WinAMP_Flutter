@@ -1,3 +1,6 @@
+[![HitCount](http://hits.dwyl.com/ishandeveloper/WinAMP-Flutter.svg)](http://hits.dwyl.com/ishandeveloper/WinAMP-Flutter)
+
+
 <img src="./screenshots/winamp.png" width="100%">
 
 # WinAMP

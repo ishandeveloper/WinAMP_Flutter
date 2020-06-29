@@ -83,6 +83,14 @@ class _DesktopMainState extends State<DesktopMain> {
 
   @override
   Widget build(BuildContext context) {
+    void stopMusic() {
+      setState(() {
+        paused = true;
+        currentTrack = "No Track Selected";
+      });
+      stopAudio();
+    }
+
     void trackTime() {
       setState(() {
         // ignore: division_optimization
@@ -103,15 +111,27 @@ class _DesktopMainState extends State<DesktopMain> {
       setState(() {
         trackMin = "0" + trackMinint.toString();
       });
+
+      if (trackMin == "03" && trackSec == "04") {
+        setState(() {
+          seekTime = 0;
+          trackMinint = 0;
+          trackSecint = 0;
+          trackMin = "00";
+          trackSec = "00";
+        });
+        stopMusic();
+        seekAudio(0);
+      }
     }
 
     void seeker() async {
       Timer.periodic(Duration(milliseconds: 1000), (timer) {
         if (!paused) {
-          trackTime();
           setState(() {
             seekTime += 1;
           });
+          trackTime();
         } else {
           // dispose();
         }
@@ -156,14 +176,6 @@ class _DesktopMainState extends State<DesktopMain> {
         paused = true;
         currentTrack = "PAUSED - Rough - Jordyn Edmonds";
       });
-    }
-
-    void stopMusic() {
-      setState(() {
-        paused = true;
-        currentTrack = "No Track Selected";
-      });
-      stopAudio();
     }
 
     return Container(
